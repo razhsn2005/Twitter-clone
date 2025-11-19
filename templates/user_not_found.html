@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>User Not Found</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-white min-h-screen flex items-center justify-center">
+	<div class="max-w-xl w-full p-6">
+		<div class="bg-white p-8 rounded-xl shadow-md text-center">
+			<div class="text-6xl mb-4">🧭</div>
+			<h1 class="text-2xl font-bold mb-2">User not found</h1>
+			<p class="text-gray-600 mb-6">We couldn't find a user with the handle <span class="font-mono text-gray-800">@{{ username }}</span>.</p>
+
+			<div class="flex justify-center space-x-4">
+				<a href="{{ url_for('index') }}" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Back to Feed</a>
+				<a href="{{ url_for('users') }}" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200">Browse Users</a>
+				<a href="{{ url_for('register') }}" class="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200">Create Account</a>
+			</div>
+
+			<p class="text-xs text-gray-400 mt-4">Tip: check for typos or try searching for the user.</p>
+		</div>
+	</div>
+</body>
+</html>
